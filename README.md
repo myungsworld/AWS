@@ -16,3 +16,4 @@ DNS보다 저게 더 클래식하고 좋은듯
 
 ### S3 (Simple Storage Service)
 http://bucket-bootstrap-blog-exmaple.s3-website.ap-northeast-2.amazonaws.com/  두번째 내 홈페이지 였던것;;  
+<img width="1440" alt="스크린샷 2020-10-08 오후 3 33 49" src="https://user-images.githubusercontent.com/56465854/95423427-0508f580-097c-11eb-991c-931f1b1a3a9d.png">
