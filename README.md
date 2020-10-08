@@ -13,3 +13,6 @@ aws 책 몇페이지만 읽었을 뿐인데도 학교 통신 수업에서 듣던
 Amazon Polly(TTS) : Text to Speech 문자 그대로 글을 음성으로 변환해주는 API  
 서버를 영원히 켜둘수 있다면 좋을텐데 월마다 돈이 나가는걸 원치 않기 때문에 이 사이트는 다시 볼수 없을것이다람쥐 http://13.124.136.253/ 내 첫 서버;;  
 DNS보다 저게 더 클래식하고 좋은듯  
+
+### S3 (Simple Storage Service)
+http://bucket-bootstrap-blog-exmaple.s3-website.ap-northeast-2.amazonaws.com/  두번째 내 홈페이지 였던것;;  
