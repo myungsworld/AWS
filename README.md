@@ -30,7 +30,7 @@ http://bucket-bootstrap-blog-exmaple.s3-website.ap-northeast-2.amazonaws.com/  �
 <img width="1440" alt="스크린샷 2020-10-08 오후 4 52 53" src="https://user-images.githubusercontent.com/56465854/95430655-07bd1800-0987-11eb-89d5-9508b7c24ed3.png">
 
 ### AWSLambda
-SNS 메세지 푸시  
+__SNS 메세지 푸시__  
 IAM에서 SNS 정책 쓰기로 생성 한 다음 새로 람다 함수를 만들어서 그 정책을 적용 시킨다음 
 ```javascript
 const AWS = require('aws-sdk');
