@@ -51,5 +51,5 @@ exports.handler = (event, context, callback) => {
             });
 };
 ```
-코드를 넣고 json 에 보낼 내용과 폰번호를 적으면 
+코드를 넣고 json 에 보낼 내용과 폰번호를 적으면  
 <img width = "300" src="https://user-images.githubusercontent.com/56465854/95545135-fbdd5e80-0a37-11eb-87c9-18bc15594496.png">
