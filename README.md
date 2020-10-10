@@ -74,5 +74,65 @@ API Gateway와 lambda를 쓰면 원하는 어떤 언어든 작성할수 있는 �
 2. 열기 : 별도의 인증 없이 누구나 요청을 보낼 수 있다.  
 3. API키로 열기: 사용 가능한 인증키를 발급받아 사용함, IAM 권한을 만들지 않아도 사용가능, 인증키별로 사용량과 접근 가능한 API 설정  
 
-__S3 + AWS 인공지능(Amazon translate) + 웹__ 구축  
+__S3 + AWS 인공지능(Amazon translate) + APIGateway +lambda__
 
+요약   
+1. 람다 함수 생성 및 소스코드 작성  
+2. 람다 함수에 정책 생성 그리고 정책 추가 __(TranslateFullAccess)__  
+3. API 게이트웨이 설정  
+4. 버킷 생성 한 다음 파일 업로드 및 웹 사이트 호스팅  
++ 여기서 버킷정책을 설정해주지 않아 에러가 났다.  
+문제는 해결했지만 정확한 이유는 모르겠다.  
+추가한 코드 => 버킷정책에 모든 권한을 퍼블릭으로 풀어서 한건데 구글링해서 에러만 고친꼴  
+정책에 대해선 더 심도있게 공부할 필요가 있음.  
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "PublicReadGetObject",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::translate-apigateway-lambda-dynamodb/*"
+        }
+    ]
+}
+```
+__람다 함수 소스코드__  
+
+```
+var AWS = require('aws-sdk');
+AWS.config.update({region: 'us-east-1'});
+
+var translate = new AWS.Translate();
+
+exports.handler = function (event, context, callback){
+    
+    console.log(JSON.stringify(event.body));
+    const response = JSON.parse(event.body)
+    
+    try {
+        const translateParams = {
+            SourceLanguageCode: 'ko',
+            TargetLanguageCode: 'en',
+            Text: response.text
+        }
+        
+        translate.translateText(translateParams, function (err, data){
+            if (err) callback (err)
+            callback(null,{
+                statusCode:200,
+                headers: {
+                    "Access-Control-Allow-Origin" : "*",
+                    "Access-Control-Allow-Credentials" : true
+                },
+                body:data.TranslatedText
+            })
+        })
+    }catch(e){
+        callback(null,{
+            statusCode:200,
+            body:JSON.stringify(e)
+        })
+```
