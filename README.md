@@ -118,7 +118,8 @@ exports.handler = async (event) => {
 };
 ```
 API 게이트웨이 엔드포인트로 접속한다음 쿼리를 날리면  
-
+<img width="600" alt="스크린샷 2020-10-10 오후 5 27 02" src="https://user-images.githubusercontent.com/56465854/95650740-679af680-0b20-11eb-843f-ad5b67a03d54.png">
+이렇게 저장되는걸 볼수 있다.  
 
 ---
 ### S3 + AWS 인공지능(Amazon translate) + APIGateway +lambda__
