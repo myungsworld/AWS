@@ -77,7 +77,8 @@ API Gateway와 lambda를 쓰면 원하는 어떤 언어든 작성할수 있는 �
 
 지금은 연습하는거니까 열기로 설정하고 
 람다 에디터에 DynamoDB API 와 GET 방식으로 웹사이트에서 쿼리값을 보내 DB에 저장해본다.  
-소스코드
+
+람다 소스코드
 ```javascript
 const AWS = require('aws-sdk');
 const dynamodb = new AWS.DynamoDB.DocumentClient();
@@ -116,6 +117,8 @@ exports.handler = async (event) => {
     }
 };
 ```
+API 게이트웨이 엔드포인트로 접속한다음 쿼리를 날리면  
+
 
 ---
 ### S3 + AWS 인공지능(Amazon translate) + APIGateway +lambda__
