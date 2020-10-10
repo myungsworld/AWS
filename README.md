@@ -139,3 +139,4 @@ exports.handler = function (event, context, callback){
             body:JSON.stringify(e)
         })
 ```
+<img width="500" alt="스크린샷 2020-10-10 오후 5 26 09" src="https://user-images.githubusercontent.com/56465854/95650350-0a9e4100-0b1e-11eb-9998-f7ca17b3f3a4.png">
