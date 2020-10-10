@@ -75,9 +75,50 @@ API Gateway와 lambda를 쓰면 원하는 어떤 언어든 작성할수 있는 �
 2. 열기 : 별도의 인증 없이 누구나 요청을 보낼 수 있다.  
 3. API키로 열기: 사용 가능한 인증키를 발급받아 사용함, IAM 권한을 만들지 않아도 사용가능, 인증키별로 사용량과 접근 가능한 API 설정 
 
+지금은 연습하는거니까 열기로 설정하고 
+람다 에디터에 DynamoDB API 와 GET 방식으로 웹사이트에서 쿼리값을 보내 DB에 저장해본다.  
+소스코드
+```
+const AWS = require('aws-sdk');
+const dynamodb = new AWS.DynamoDB.DocumentClient();
 
+exports.handler = async (event) => {
+    let response;
+    
+    if (!event.queryStringParameters || !event.queryStringParameters.id) {
+        response = {
+            statusCode : 400,
+            body: JSON.stringify("id가 없습니다.")
+        };
+        return response;
+    } else {
+        let params = {
+            Item:{
+                id:event.queryStringParameters.id,
+                data:event.queryStringParameters
+            },
+            TableName: "dynamo_apigateway_query",
+        };
+        await dynamodb.put(params).promise().catch(e => {
+            response = {
+                statusCode: 500,
+                body: JSON.stringify("에러:" + e),
+            };
+            return response;
+        });
+        
+        response = {
+            statusCode : 200,
+            body : JSON.stringify("데이터가 성공적으로 저장되었습니다.."),
+        };
+    return response;
+        
+    }
+};
+```
 
-__S3 + AWS 인공지능(Amazon translate) + APIGateway +lambda__
+---
+### S3 + AWS 인공지능(Amazon translate) + APIGateway +lambda__
 
 요약   
 1. 람다 함수 생성 및 소스코드 작성  
