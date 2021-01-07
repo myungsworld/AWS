@@ -24,6 +24,10 @@
         - Scale Out
             - 컴퓨터의 속도가 무료로 빨라지는 시대는 끝남
             - Scale Up으로 인해 더이상 컴퓨터의 속도가 늘어 날 수 없다면 여러개의 컴퓨터를 사용해야 함
+            - <img width="323" height="184" alt="Screen Shot 2021-01-07 at 2 05 37 AM" src="https://user-images.githubusercontent.com/56465854/103853496-11781980-5063-11eb-85c0-ceb321bf5f02.png">
+
+
+
 
     - 동시접속 스트레스 테스트
         - 웹서버에 접속자가 400명이고 200명 동시 접속
