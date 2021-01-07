@@ -1,29 +1,47 @@
 # AWS
 
 
-## IAM
-리소스에 대한 액세스 관리  
-역할을 가지게 될 __서비스 주체__ 와 그 서비스 주체에 어떤 역할을 부여할지에 대한 __정책__  
+- ## IAM
+    - 리소스에 대한 액세스 관리  
+    - 역할을 가지게 될 __서비스 주체__ 와 그 서비스 주체에 어떤 역할을 부여할지에 대한 __정책__  
+    - 즉, 내가 서비스할 주체에 대한 정책을 설정하는 곳  
 
-즉, 내가 서비스할 주체에 대한 정책을 설정하는 곳  
+- ## EC2
+    - One Instance = One Computer
+    - AMIs 
+        - 아마존 머신 이미지 => 현재의 인스턴스의 상태를 그대로 저장해서 복원할수 있는 시스템  
+        - 깃허브의 브랜치와 비슷한 개념
 
-## EC2
-- One Instance = One Computer
-- AMIs 
-    - 아마존 머신 이미지 => 현재의 인스턴스의 상태를 그대로 저장해서 복원할수 있는 시스템  
-    - 깃허브의 브랜치와 비슷한 개념
-       
+    - Elastic IP
+        - 고정 IP 할당
+
+    - Scalability(확장성)
+        - 변화하는 수요에 탄력적인 변화 가능
+        - Scale Up , Scale Down
+            - 1. 사용중인 인스턴스의 이미지를 만든다 (이 경우 인스턴스가 running이 아니기에 사용자들에게 미리 알려야 함)
+            - 2. Scale up 한 새로운 인스턴스를 이미지를 가지고 생성
+            - 3. Elastic IP 를 새로 만든 인스턴스에 할당
+        - Scale Out
+
+    - 동시접속 스트레스 테스트
+        - 웹서버에 접속자가 400명이고 200명 동시 접속
+        - (images)
+
+    - 
+    - Error   
+        - [권한거부(public key) err Handling ](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/TroubleshootingInstancesConnecting.html#TroubleshootingInstancesConnectingPuTTY)   
+
 ### SSH(Secure Shell Protocol)
 네트워크 프로토콜 중 하나로 공공 네트워크로 서로 통신할때 보안을 가지고 안전하게 사용하기 위함  
 
 대표적인 예로는 데이터 전송과 원격제어  
-데이터 전송에는 원격 저장소인 깃허브(여기^^)에 소스코드를 전송할때 SSH를 활용해 파일 전송  
+데이터 전송에는 원격 저장소인 깃허브에 소스코드를 전송할때 SSH를 활용해 파일 전송  
 원격 제어: AWS를 통해 생성한 인스턴스에 접속해 명령을 내리기 위해 SSH로 접속 해야 함  
 
 ### AWSForWordPressPlugin
 Amazon Polly(TTS) : Text to Speech 문자 그대로 글을 음성으로 변환해주는 API  
 서버를 영원히 켜둘수 있다면 좋을텐데 월마다 돈이 나가는걸 원치 않기 때문에 이 사이트는 다시 볼수 없을것이다람쥐 http://13.124.136.253/ 내 첫 서버  
-DNS보다 저게 더 클래식하고 좋은듯  
+  
 
 ### S3 (Simple Storage Service)
 http://bucket-bootstrap-blog-exmaple.s3-website.ap-northeast-2.amazonaws.com/  두번째 내 홈페이지 였던것  
