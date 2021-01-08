@@ -46,7 +46,8 @@
         - 클라우드에서 설정된 전체적인 요금이나 알람 등은 Cloud Watch 에서 확인 
 
 - ## S3 (Simple Storage Service)
-    
+    - Bucket : SSD , HDD
+    - [Nodejs 로 시작](https://www.youtube.com/watch?v=HvwnEsPA7zU&list=PLuHgQVnccGMC5AYnBg8ffg5utOLwEj4fZ&index=41)
 ### SSH(Secure Shell Protocol)
 네트워크 프로토콜 중 하나로 공공 네트워크로 서로 통신할때 보안을 가지고 안전하게 사용하기 위함  
 
