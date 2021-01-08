@@ -8,36 +8,45 @@
 
 - ## EC2
     - One Instance = One Computer
-    - AMIs 
+    - **AMIs**
         - 아마존 머신 이미지 => 현재의 인스턴스의 상태를 그대로 저장해서 복원할수 있는 시스템  
         - 깃허브의 브랜치와 비슷한 개념
 
-    - Elastic IP
+    - **Elastic IP**
         - 고정 IP 할당
 
-    - Scalability(확장성)
+    - **Scalability(확장성)**
         - 변화하는 수요에 탄력적인 변화 가능
         - Scale Up , Scale Down
             - 1. 사용중인 인스턴스의 이미지를 만든다 (이 경우 인스턴스가 running이 아니기에 사용자들에게 미리 알려야 함)
             - 2. Scale up 한 새로운 인스턴스를 이미지를 가지고 생성
             - 3. Elastic IP 를 새로 만든 인스턴스에 할당
-        - Scale Out
+        - **Scale Out**
             - 컴퓨터의 속도가 무료로 빨라지는 시대는 끝남
             - Scale Up으로 인해 더이상 컴퓨터의 속도가 늘어 날 수 없다면 여러개의 컴퓨터를 사용해야 함
             - <img width="646" height="368" alt="Screen Shot 2021-01-07 at 2 05 37 AM" src="https://user-images.githubusercontent.com/56465854/103853496-11781980-5063-11eb-85c0-ceb321bf5f02.png">
 
 
-
-
-    - 동시접속 스트레스 테스트
+    - **ELB(Elastic Load Balancers)**
+        - 유저들의 요청을 자동으로 분산 시켜 웹에 전달 
+        - 하나의 로드밸런서에 여러개의 Instance를 묶으면 ELB가 자동으로 분산 시켜 전달 해줌
+        - Health Check : Instance들의 연결과 끊김 여부를 확인
+        
+    - **동시접속 스트레스 테스트**
         - 웹서버에 접속자가 400명이고 200명 동시 접속
         - <img width="1121" alt="Screen Shot 2021-01-06 at 7 41 28 AM" src="https://user-images.githubusercontent.com/56465854/103853657-7b90be80-5063-11eb-9cf6-88fe7a0e30d1.png">
 
+    - **Error**   
+        - [권한거부(public key) err Handling ](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/TroubleshootingInstancesConnecting.html#TroubleshootingInstancesConnectingPuTTY)  
 
-    - 
-    - Error   
-        - [권한거부(public key) err Handling ](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/TroubleshootingInstancesConnecting.html#TroubleshootingInstancesConnectingPuTTY)   
+    - **Auto Scaling**
+        - 로드 밸런싱을 자동으로 해주는 시스템
+        - 내가 가진 인스턴스 이미지와 ELB를 설정
+        - CPU 점유율, 퍼센테이지 , 알람 ,부하가 걸릴 때 인스턴스를 늘리고 줄이기 등등 조정 가능
+        - 클라우드에서 설정된 전체적인 요금이나 알람 등은 Cloud Watch 에서 확인 
 
+- ## S3 (Simple Storage Service)
+    
 ### SSH(Secure Shell Protocol)
 네트워크 프로토콜 중 하나로 공공 네트워크로 서로 통신할때 보안을 가지고 안전하게 사용하기 위함  
 
