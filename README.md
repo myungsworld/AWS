@@ -45,6 +45,15 @@
         - CPU 점유율, 퍼센테이지 , 알람 ,부하가 걸릴 때 인스턴스를 늘리고 줄이기 등등 조정 가능
         - 클라우드에서 설정된 전체적인 요금이나 알람 등은 Cloud Watch 에서 확인 
 
+- ## 배포
+    - **현재위치배포**
+        - 인스턴스를 하나하나 줄여가며 새로운 버전을 배포하는 방식
+    - **블루/그린배포**
+        - AutoScaling Group 별로 배포하는 방식
+    - **배포 자동화**
+        - CodeDeploy
+            - AppSpec.yml 을 소스코드에 추가해 배포를 자동화하는 방식
+
 - ## S3 (Simple Storage Service)
     - Bucket : SSD , HDD
     - [Nodejs 로 시작](https://www.youtube.com/watch?v=HvwnEsPA7zU&list=PLuHgQVnccGMC5AYnBg8ffg5utOLwEj4fZ&index=41)
