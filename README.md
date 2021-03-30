@@ -64,6 +64,6 @@
                 - Register Domain 에서 원하는 이름의 도메인을 입력하고 구매 시작
             - 2. 호스팅 영역에 있는 게 Namer server (새로 만들면 생성이 되어있음)
 - route53이 아닌 다른 등록대행자(가비아,고대디 등)를 사용했다면 이 name server를 전세계에 알려야 함
-            - 1. 등록된 NameServer를 등록대행자 값에 넣어줌 -> 등록소(Registry)에 Top level domin ex) .com , .net 으로 검색하면 따라가게 만듬
+    - 1. 등록된 NameServer를 등록대행자 값에 넣어줌 -> 등록소(Registry)에 Top level domin ex) .com , .net 으로 검색하면 따라가게 만듬
 
 
