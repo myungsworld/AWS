@@ -54,12 +54,14 @@
         - CodeDeploy
             - AppSpec.yml 을 소스코드에 추가해 배포를 자동화하는 방식
 
-- ## Route53
-    - 역할 
-        - 등록대행자와 네임서버를 임대
-    - 도메인 구입 (등록대행자(Registrar)로 사용 하기)
-        - Register Domain 에서 원하는 이름의 도메인을 입력하고 구매 시작
-        - 호스팅 영역에 있는 게 Namer server (새로 만들면 생성이 되어있음)
-            - route 53이 아닌 다른 등록대행자(가비아,고대디 등)를 사용했다면 이 name server를 전세계에 알려야 함  
-![image](https://user-images.githubusercontent.com/56465854/112920746-8b8cdb80-9144-11eb-8c5b-5b1d547153a6.png)
+- ## DNS
+    - ![image](https://user-images.githubusercontent.com/56465854/112920746-8b8cdb80-9144-11eb-8c5b-5b1d547153a6.png)
+        - Route53 역할 
+            - 등록대행자와 네임서버를 임대
+        - 1. 도메인 구입 (등록대행자(Registrar)로 사용 하기)
+            - Register Domain 에서 원하는 이름의 도메인을 입력하고 구매 시작
+        - 2. 호스팅 영역에 있는 게 Namer server (새로 만들면 생성이 되어있음)
+        - 3. route53이 아닌 다른 등록대행자(가비아,고대디 등)를 사용했다면 이 name server를 전세계에 알려야 함
+            - 3-1. 등록된 NameServer를 등록대행자 값에 넣어줌 -> 등록소(Registry)에 Top level domin ex) .com , .net 으로 검색하면 따라가게 만듬
+
 
