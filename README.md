@@ -70,4 +70,3 @@
     - A레코드 : Domain Name과 IP를 연결  
     - CNAME : Domain Name과 Domain Name을 연결  
     - A레코드의 Alias : 엘라스틱 빈스톡,s3, ec2 인스턴스등의 별칭으로 설정  
-
