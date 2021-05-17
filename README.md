@@ -74,16 +74,19 @@
     - A레코드의 Alias : 엘라스틱 빈스톡,s3, ec2 인스턴스등의 별칭으로 설정  
 
 - ## Elastic Beanstalk
-    - [Install on MacOS](https://docs.aws.amazon.com/ko_kr/elasticbeanstalk/latest/dg/eb-cli3-install-osx.html) 
+    - [EB 설치 on MacOS](https://docs.aws.amazon.com/ko_kr/elasticbeanstalk/latest/dg/eb-cli3-install-osx.html) 
         -  brew update
         -  brew install awsebcli
         -  eb --version (check)
-    - Updgrade with pip
+    - EB 업데이트
         - pip install --upgrade awsebcli
-    - [eb init](https://docs.aws.amazon.com/ko_kr/elasticbeanstalk/latest/dg/eb-cli3-configuration.html)
+    - [설정 초기화](https://docs.aws.amazon.com/ko_kr/elasticbeanstalk/latest/dg/eb-cli3-configuration.html)
+        eb init
         - 리전 선택 
         - 액세스, 보안 키 입력 ( IAM 으로 생성 ) 
             - IAM -> 액세스 관리 -> 사용자 -> 보안 자격 증명 -> 액세스 키 만들기 -> .aws/credentials 안에 키 저장
             - ![스크린샷 2021-05-17 오후 2 35 58](https://user-images.githubusercontent.com/56465854/118437368-77656380-b71d-11eb-978f-ff600aa4db57.png)
-        - ㅇㄹ
- 
+        - 어떤 application 을 쓸지 선택 ( 초기에는 default 1 )
+        - 어플리케이션 이름 지정
+        - 언어 설정
+        - SSH 키 페어 할당 ( .ssh 폴더에 이전에 만든 프라이빗 키를 할당 ) 
