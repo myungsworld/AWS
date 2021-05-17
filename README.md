@@ -83,7 +83,7 @@
     - [설정 초기화](https://docs.aws.amazon.com/ko_kr/elasticbeanstalk/latest/dg/eb-cli3-configuration.html)
         - eb init
     - .ebignore
-        - .ebignore 가 없고 .gitignore이 있는 경우 .gitignore에 지정된 파일 무시  
+        - .ebignore 가 없고 .gitignore이 있는 경우 .gitignore을 사용
         - .ebignore 가 있으면 .gitignore을 읽지 않음
     - .elasticbeanstalk/config.yml 
         - eb init 으로 생성된 환경설정 파일
@@ -92,6 +92,6 @@
     - eb deploy 
         - 이전까지 설정된 환경을 토대로 배포 
             - 추가옵션
-                - export AWS_EB_PROFILE=user2 ( 지정된 프로파일 ( user2 ) 에서 자격 증명을 읽음
+                - export AWS_EB_PROFILE=user2 ( 지정된 프로파일 ( user2 ) 에서 자격 증명을 읽음 )
                 - --staged 소스에 커밋 하지 않는 경우 
-            - ex ) AWS_EB_PROFILE=default eb deploy project-dev --staged 
+            - ex ) AWS_EB_PROFILE=default eb deploy project-dev(환경이름) --staged 
