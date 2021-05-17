@@ -83,7 +83,7 @@
     - [eb init](https://docs.aws.amazon.com/ko_kr/elasticbeanstalk/latest/dg/eb-cli3-configuration.html)
         - 리전 선택 
         - 액세스, 보안 키 입력 ( IAM 으로 생성 ) 
-        - IAM -> 액세스 관리 -> 사용자 -> 보안 자격 증명 -> 액세스 키 만들기 -> .aws/credentials 안에 
-        - ![스크린샷 2021-05-17 오후 2 35 58](https://user-images.githubusercontent.com/56465854/118437368-77656380-b71d-11eb-978f-ff600aa4db57.png)
-
-
+            - IAM -> 액세스 관리 -> 사용자 -> 보안 자격 증명 -> 액세스 키 만들기 -> .aws/credentials 안에 키 저장
+            - ![스크린샷 2021-05-17 오후 2 35 58](https://user-images.githubusercontent.com/56465854/118437368-77656380-b71d-11eb-978f-ff600aa4db57.png)
+        - ㅇㄹ
+ 
