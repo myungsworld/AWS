@@ -73,7 +73,7 @@
     - CNAME : Domain Name과 Domain Name을 연결  
     - A레코드의 Alias : 엘라스틱 빈스톡,s3, ec2 인스턴스등의 별칭으로 설정  
 
-- **Elastic Beanstalk**
+- ## Elastic Beanstalk
     - [Install on MacOS](https://docs.aws.amazon.com/ko_kr/elasticbeanstalk/latest/dg/eb-cli3-install-osx.html) 
         -  brew update
         -  brew install awsebcli
