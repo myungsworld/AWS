@@ -87,4 +87,11 @@
         - .ebignore 가 있으면 .gitignore을 읽지 않음
     - .elasticbeanstalk/config.yml 
         - eb init 으로 생성된 환경설정 파일
-        - 디폴트 설정은 파일전체를 올리고 
+        - 프로젝트 폴더대신 아티팩트 배포( 디폴트 설정은 파일전체를 올리고 아래 설정을 주면 .zip으로 올리고 압축 풀어서 실행 )
+        - ![스크린샷 2021-05-17 오후 3 09 01](https://user-images.githubusercontent.com/56465854/118439931-dc22bd00-b721-11eb-9452-3adb02cc913b.png)
+    - eb deploy 
+        - 이전까지 설정된 환경을 토대로 배포 
+            - 추가옵션
+                - export AWS_EB_PROFILE=user2 ( 지정된 프로파일 ( user2 ) 에서 자격 증명을 읽음
+                - --staged 소스에 커밋 하지 않는 경우 
+            - ex ) AWS_EB_PROFILE=default eb deploy project-dev --staged 
