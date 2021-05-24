@@ -95,3 +95,6 @@
                 - export AWS_EB_PROFILE=user2 ( 지정된 프로파일 ( user2 ) 에서 자격 증명을 읽음 )
                 - --staged 소스에 커밋 하지 않는 경우 
             - ex ) AWS_EB_PROFILE=default eb deploy project-dev(환경이름) --staged 
+
+- [bastion Host](https://velog.io/@jinny/bastion-Host%EB%A1%9C-private-network%EC%A0%91%EC%86%8D%ED%95%98%EA%B8%B0)
+    - 내부와 외부 네트워크 사이에있는 게이트웨이역할을 하는 호스트로 외부에서 바로 내부에 접근하는 것을 막기위해 사용
