@@ -26,6 +26,9 @@
             - Scale Up으로 인해 더이상 컴퓨터의 속도가 늘어 날 수 없다면 여러개의 컴퓨터를 사용해야 함
             - <img width="646" height="368" alt="Screen Shot 2021-01-07 at 2 05 37 AM" src="https://user-images.githubusercontent.com/56465854/103853496-11781980-5063-11eb-85c0-ceb321bf5f02.png">
 
+    - Linux 인스턴스 메모리공간 관련 명령어
+        - lsblk : 블록장치를 나열하는 명령어
+        - df -h : 파일 시스템의 디스크 공간에 대한 필수 정보 표시 명령어 
 
     - **ELB(Elastic Load Balancers)**
         - 유저들의 요청을 자동으로 분산 시켜 웹에 전달 
@@ -97,6 +100,7 @@
             - ex ) AWS_EB_PROFILE=default eb deploy project-dev(환경이름) --staged 
     - [eb config (EnvironmentName)](https://docs.aws.amazon.com/ko_kr/elasticbeanstalk/latest/dg/command-options-general.html#command-options-general-elbv2)
         - eb config에 대한 모든 내용
+
 ---
 - [bastion Host](https://velog.io/@jinny/bastion-Host%EB%A1%9C-private-network%EC%A0%91%EC%86%8D%ED%95%98%EA%B8%B0)
     - 내부와 외부 네트워크 사이에있는 게이트웨이역할을 하는 호스트로 외부에서 바로 내부에 접근하는 것을 막기위해 사용
