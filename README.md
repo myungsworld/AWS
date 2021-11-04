@@ -2,6 +2,12 @@
 
 
 ## Access CodeCommit repo in mutiple AWS accounts with SSH credentials
+```shell
+ssh-keygen
+cat ~/.ssh/id_rsa.pub
+```
+값 복사 후 적용할 IAM USER -> Security credentials -> Upload SSH public key   
+이후 생성된 SSH key ID 값으로 아래 과정 진행  
 
 **한계정 사용할시**  
 
