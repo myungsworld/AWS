@@ -4,8 +4,10 @@
 ## Access CodeCommit repo in mutiple AWS accounts with SSH credentials
 
 - **한계정만 사용할시**  
-~/.ssh/config 파일에   
+
 ```shell
+~/.ssh/config
+
 Host git-codecommit.*.amazonaws.com
 User Your-SSH-Key-ID, such as APKAEIBAERJR2EXAMPLE
 IdentityFile Your-Private-Key-File, such as ~/.ssh/codecommit_rsa or ~/.ssh/id_rsa
@@ -13,8 +15,10 @@ IdentityFile Your-Private-Key-File, such as ~/.ssh/codecommit_rsa or ~/.ssh/id_r
 의 형식으로 생성한 ssh-key 를 넣음  
 
 - **두계정 이상일시**  
-config 파일
+
 ```shell
+~/.ssh/config
+
 Host codecommit-1
     Hostname git-codecommit.us-east-1.amazonaws.com
     User SSH-KEY-ID-1 # This is the SSH Key ID you copied from IAM in Amazon Web Services account 1 (for example, APKAEIBAERJR2EXAMPLE1).
