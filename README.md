@@ -1,63 +1,32 @@
 # AWS
 
 
-- ## IAM
-    - 리소스에 대한 액세스 관리  
-    - 역할을 가지게 될 __서비스 주체__ 와 그 서비스 주체에 어떤 역할을 부여할지에 대한 __정책__  
-    - 즉, 내가 서비스할 주체에 대한 정책을 설정하는 곳  
+## Access CodeCommit repo in mutiple AWS accounts with SSH credentials
 
-- ## EC2
-    - One Instance = One Computer
-    - **AMIs**
-        - 아마존 머신 이미지 => 현재의 인스턴스의 상태를 그대로 저장해서 복원할수 있는 시스템  
-        - 깃허브의 브랜치와 비슷한 개념
+**한계정만 사용할시**  
+~/.ssh/config 파일에   
+```shell
+Host git-codecommit.*.amazonaws.com
+User Your-SSH-Key-ID, such as APKAEIBAERJR2EXAMPLE
+IdentityFile Your-Private-Key-File, such as ~/.ssh/codecommit_rsa or ~/.ssh/id_rsa
+```
+의 형식으로 생성한 ssh-key 를 넣음  
 
-    - **Elastic IP**
-        - 고정 IP 할당
+**두계정 이상일시**  
+config 파일
+```shell
+Host codecommit-1
+    Hostname git-codecommit.us-east-1.amazonaws.com
+    User SSH-KEY-ID-1 # This is the SSH Key ID you copied from IAM in Amazon Web Services account 1 (for example, APKAEIBAERJR2EXAMPLE1).
+    IdentityFile ~/.ssh/codecommit_rsa # This is the path to the associated public key file, such as id_rsa.  We advise creating CodeCommit specific _rsa files.
+ 
+Host codecommit-2
+    Hostname git-codecommit.us-east-1.amazonaws.com
+    User SSH-KEY-ID-2 # This is the SSH Key ID you copied from IAM in Amazon Web Services account 2 (for example, APKAEIBAERJR2EXAMPLE2).
+    IdentityFile ~/.ssh/codecommit_2_rsa # This is the path to the other associated public key file.  We advise creating CodeCommit specific _rsa files.
+```
 
-    - **Scalability(확장성)**
-        - 변화하는 수요에 탄력적인 변화 가능
-        - Scale Up , Scale Down
-            - 1. 사용중인 인스턴스의 이미지를 만든다 (이 경우 인스턴스가 running이 아니기에 사용자들에게 미리 알려야 함)
-            - 2. Scale up 한 새로운 인스턴스를 이미지를 가지고 생성
-            - 3. Elastic IP 를 새로 만든 인스턴스에 할당
-        - **Scale Out**
-            - 컴퓨터의 속도가 무료로 빨라지는 시대는 끝남
-            - Scale Up으로 인해 더이상 컴퓨터의 속도가 늘어 날 수 없다면 여러개의 컴퓨터를 사용해야 함
-            - <img width="646" height="368" alt="Screen Shot 2021-01-07 at 2 05 37 AM" src="https://user-images.githubusercontent.com/56465854/103853496-11781980-5063-11eb-85c0-ceb321bf5f02.png">
-
-    - Linux 인스턴스 메모리공간 관련 명령어
-        - lsblk : 블록장치를 나열하는 명령어
-        - df -h : 파일 시스템의 디스크 공간에 대한 필수 정보 표시 명령어 
-
-    - **ELB(Elastic Load Balancers)**
-        - 유저들의 요청을 자동으로 분산 시켜 웹에 전달 
-        - 하나의 로드밸런서에 여러개의 Instance를 묶으면 ELB가 자동으로 분산 시켜 전달 해줌
-        - Health Check : Instance들의 연결과 끊김 여부를 확인
-        
-    - **동시접속 스트레스 테스트**
-        - 웹서버에 접속자가 400명이고 200명 동시 접속
-        - <img width="1121" alt="Screen Shot 2021-01-06 at 7 41 28 AM" src="https://user-images.githubusercontent.com/56465854/103853657-7b90be80-5063-11eb-9cf6-88fe7a0e30d1.png">
-
-    - **Error**   
-        - [권한거부(public key) err Handling ](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/TroubleshootingInstancesConnecting.html#TroubleshootingInstancesConnectingPuTTY)  
-
-    - **Auto Scaling**
-        - 로드 밸런싱을 자동으로 해주는 시스템
-        - 내가 가진 인스턴스 이미지와 ELB를 설정
-        - CPU 점유율, 퍼센테이지 , 알람 ,부하가 걸릴 때 인스턴스를 늘리고 줄이기 등등 조정 가능
-        - 클라우드에서 설정된 전체적인 요금이나 알람 등은 Cloud Watch 에서 확인 
-
-- ## 배포
-    - **현재위치배포**
-        - 인스턴스를 하나하나 줄여가며 새로운 버전을 배포하는 방식
-    - **블루/그린배포**
-        - AutoScaling Group 별로 배포하는 방식
-    - **배포 자동화**
-        - CodeDeploy
-            - AppSpec.yml 을 소스코드에 추가해 배포를 자동화하는 방식
-
-
+한 계정은 지역을 구분없이 넣어 주고 두개 이상의 계정일시 리젼을 확실하게 기입해 나눠야 한다 Host의 값은 편한걸로 넣고 git clone ssh://{Host값}/{repo path}. 
 
 ## DNS  
 ![image](https://user-images.githubusercontent.com/56465854/112920746-8b8cdb80-9144-11eb-8c5b-5b1d547153a6.png)  
