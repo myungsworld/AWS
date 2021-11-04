@@ -3,7 +3,7 @@
 
 ## Access CodeCommit repo in mutiple AWS accounts with SSH credentials
 
-- **한계정만 사용할시**  
+**한계정 사용할시**  
 
 ```shell
 ~/.ssh/config
@@ -13,7 +13,7 @@ User Your-SSH-Key-ID, such as APKAEIBAERJR2EXAMPLE
 IdentityFile Your-Private-Key-File, such as ~/.ssh/codecommit_rsa or ~/.ssh/id_rsa
 ```
 
-- **두계정 이상일시**  
+**두계정 이상일시**  
 
 ```shell
 ~/.ssh/config
