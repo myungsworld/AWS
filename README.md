@@ -12,7 +12,6 @@ Host git-codecommit.*.amazonaws.com
 User Your-SSH-Key-ID, such as APKAEIBAERJR2EXAMPLE
 IdentityFile Your-Private-Key-File, such as ~/.ssh/codecommit_rsa or ~/.ssh/id_rsa
 ```
-의 형식으로 생성한 ssh-key 를 넣음  
 
 - **두계정 이상일시**  
 
