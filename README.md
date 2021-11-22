@@ -1,7 +1,9 @@
 # AWS
 
 ## VPC
-[(참조)](https://medium.com/harrythegreat/aws-%EA%B0%80%EC%9E%A5%EC%89%BD%EA%B2%8C-vpc-%EA%B0%9C%EB%85%90%EC%9E%A1%EA%B8%B0-71eef95a7098#:~:text=NAT%20%EA%B2%8C%EC%9D%B4%ED%8A%B8%EC%9B%A8%EC%9D%B4,%EC%9C%84%ED%95%9C%20%EC%95%84%EC%9B%83%EB%B0%94%EC%9A%B4%EB%93%9C%20%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4%EC%9E%85%EB%8B%88%EB%8B%A4.&text=%EC%9D%B4%EB%95%8C%20%ED%8D%BC%EB%B8%94%EB%A6%AD%20%EC%84%9C%EB%B8%8C%EB%84%B7%EC%83%81%EC%97%90%EC%84%9C%20%EB%8F%99%EC%9E%91,%EC%9D%B8%ED%84%B0%EB%84%B7%EA%B2%8C%EC%9D%B4%ED%8A%B8%EC%9B%A8%EC%9D%B4%EC%99%80%20%EC%97%B0%EA%B2%B0%ED%95%A9%EB%8B%88%EB%8B%A4.)
+
+NAT Gateway : 프라이빗 서브넷이 인터넷과 통신하기 위한 아웃바운드 인스턴스    
+
 
 ## Access CodeCommit repo in mutiple AWS accounts with SSH credentials
 ```shell
