@@ -84,7 +84,7 @@ Host의 값은 편한걸로 넣고 git clone ssh://codecommit-2/vi/repos/YOUR-RE
             - ex ) AWS_EB_PROFILE=default eb deploy project-dev(환경이름) --staged 
     - [eb config (EnvironmentName)](https://docs.aws.amazon.com/ko_kr/elasticbeanstalk/latest/dg/command-options-general.html#command-options-general-elbv2)
         - eb config에 대한 모든 내용
-
+    - Health Check 에러는 EC2 Load Balancing 에서 Target Group Health Check 엔드포인트 재설정 하면됨  
 ---
 - [bastion Host](https://velog.io/@jinny/bastion-Host%EB%A1%9C-private-network%EC%A0%91%EC%86%8D%ED%95%98%EA%B8%B0)
     - 내부와 외부 네트워크 사이에있는 게이트웨이역할을 하는 호스트로 외부에서 바로 내부에 접근하는 것을 막기위해 사용
