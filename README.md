@@ -45,6 +45,24 @@ Host codecommit-2
 한 계정은 지역을 구분없이 넣어 주고 두개 이상의 계정일시 리젼을 확실하게 기입해 나눠야 한다  
 Host의 값은 편한걸로 넣고 git clone ssh://codecommit-2/vi/repos/YOUR-REPO-NAME   
 
+AWS Access key Config
+
+```shell
+~/.aws/credentials
+
+#[default]
+#aws_access_key_id = YOUR_ACCESS_KEY
+#aws_secret_access_key = YOUR_SECRET_KEY
+
+[A]
+aws_access_key_id = YOUR_ACCESS_KEY
+aws_secret_access_key = YOUR_SECRET_KEY
+
+[B]
+aws_access_key_id = YOUR_ACCESS_KEY
+aws_secret_access_key = YOUR_SECRET_KEY
+```
+
 ## DNS  
 ![image](https://user-images.githubusercontent.com/56465854/112920746-8b8cdb80-9144-11eb-8c5b-5b1d547153a6.png)  
 
