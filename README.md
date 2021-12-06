@@ -2,8 +2,9 @@
 
 ## VPC
 
-[VPC 구축 참조](https://bluese05.tistory.com/48)   
-Internet Gateway : 퍼블릭 서브넷과 통신. 
+[VPC 구축 참조](https://bluese05.tistory.com/48)
+[ELastic Beanstalk 사용을 위한 VPN 구축](https://myungsworld.tistory.com/3)   
+Internet Gateway : 퍼블릭 서브넷과 통신        
 NAT Gateway : 프라이빗 서브넷이 인터넷과 통신하기 위한 아웃바운드 인스턴스
 
 
