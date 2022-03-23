@@ -44,7 +44,7 @@ Host codecommit-2
 ```
 
 한 계정은 지역을 구분없이 넣어 주고 두개 이상의 계정일시 리젼을 확실하게 기입해 나눠야 한다  
-Host의 값은 편한걸로 넣고 git clone ssh://codecommit-2/vi/repos/YOUR-REPO-NAME   
+Host의 값은 편한걸로 넣고 git clone ssh://codecommit-2/v1/repos/YOUR-REPO-NAME   
 
 AWS Access key Config
 
